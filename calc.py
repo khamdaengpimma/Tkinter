@@ -1,9 +1,6 @@
 from tkinter import *
 
-# Define the global variables
 expression = ""
-
-# Define the functions
 def press(number):
     global expression
     expression += number
@@ -25,15 +22,12 @@ def equal():
 
     display.update()
 
-# Create the main window
 window = Tk()
 window.title("Calculator")
 
-# Create the display
 display = Label(window, text=expression, font=("Arial", 16))
 display.grid(row=0, column=0, columnspan=4)
 
-# Create the buttons
 button_1 = Button(window, text="1", command=lambda: press("1"))
 button_1.grid(row=1, column=0)
 
@@ -70,5 +64,4 @@ button_clear.grid(row=4, column=1)
 button_equal = Button(window, text="=", command=equal)
 button_equal.grid(row=4, column=2)
 
-# Start the main loop
 window.mainloop()
