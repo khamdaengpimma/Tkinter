@@ -22,14 +22,14 @@ root.title("Calculator")
 
 
 
-# Entry field
+
 entry = Entry(root, font="Helvetica 20 bold", justify="right",fg='Blue')
 entry.pack(fill=BOTH, expand=True)
 # Your name label
 name= Label(root, text="Khamdaeng",font="Helvetica 15 bold",fg="red")
 name.pack()
 
-# Buttons
+
 button_frame = Frame(root)
 button_frame.pack()
 
