@@ -26,8 +26,8 @@ root.title("Calculator")
 entry = Entry(root, font="Helvetica 20 bold", justify="right",fg='Blue')
 entry.pack(fill=BOTH, expand=True)
 # Your name label
-your_name_label = Label(root, text="Khamdaeng",font="Helvetica 15 bold",fg="red")
-your_name_label.pack()
+name= Label(root, text="Khamdaeng",font="Helvetica 15 bold",fg="red")
+name.pack()
 
 # Buttons
 button_frame = Frame(root)
