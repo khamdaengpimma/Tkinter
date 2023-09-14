@@ -1,4 +1,3 @@
-# import tkinter as tk
 from tkinter import * 
 def button_click(event):
     text = event.widget.cget("text")
