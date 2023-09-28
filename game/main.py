@@ -29,9 +29,11 @@ class Ball:
 def update_animation():
     ball1.move()
     ball2.move()
+    ball.move()
+    ball3.move()
     
     # Check for collision between balls
-    distance = ((ball2.x - ball1.x) ** 2 + (ball2.y - ball1.y) ** 2) ** 0.5
+    distance = ((ball2.x - ball1.x) ** 2 + (ball2.y - ball1.y) ** 2) ** 0.5555
     if distance <= ball1.radius + ball2.radius:
         # Swap velocities for reflection effect
         ball1.dx, ball2.dx = ball2.dx, ball1.dx
@@ -62,12 +64,14 @@ def control_ball2(event):
         ball2.dx = 2
 
 root = tk.Tk()
-root.title("Bouncing Balls")
-canvas = tk.Canvas(root, width=400, height=400, bg="white")
+root.title("Ball")
+canvas = tk.Canvas(root, width=500, height=500, bg="white")
 canvas.pack()
 
-ball1 = Ball(canvas, 50, 100, 3, 2, 20, "red")
-ball2 = Ball(canvas, 150, 150, -2, -3, 20, "blue")
+ball1 = Ball(canvas, 50, 200, 3, 2, 30, "red")
+ball2 = Ball(canvas, 150, 150, -2, -3, 30, "blue")
+ball = Ball(canvas, 50, 300, 3, 2, 30, "green")
+ball3 = Ball(canvas, 150, 450, -2, -3, 30, "black")
 
 update_animation()
 
